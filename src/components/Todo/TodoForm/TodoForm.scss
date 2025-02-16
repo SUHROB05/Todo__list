@@ -1,0 +1,145 @@
+form {
+    width: 100%;
+    height: calc(100vh - 50px);
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 10px 0 20px 0;
+    z-index: 2;
+
+    .malumot {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #cfd0d2;
+            border-radius: 6px;
+            font-size: 16px;
+            background: transparent;
+            outline: none;
+            transition: border 0.3s ease;
+
+            &:focus {
+                border-color: #4FD1C5;
+            }
+
+            &:not(:placeholder-shown)+.labelline,
+            &:focus+.labelline {
+                top: -8px;
+                left: 10px;
+                font-size: 12px;
+                color: #4FD1C5;
+            }
+        }
+        .labelline {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            font-size: 14px;
+            background: white;
+            padding: 0 4px;
+            color: #a0a0a0;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        input[type="file"] {
+          display: none;
+        }
+        
+        .custom-file-upload {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #4FD1C5;
+          color: white;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          font-weight: bold;
+          user-select: none;
+        }
+        
+        .custom-file-upload:hover {
+          background-color: #38b2ac;
+        }
+
+        .image-preview {
+          width: 100%;
+            position: relative;
+            display: inline-block;
+            margin-top: 10px;
+        
+            .preview {
+              width: 100%;
+              height: auto;
+              object-fit: cover;
+              border-radius: 8px;
+              border: 2px solid #4FD1C5;
+            }
+        
+            .remove-btn {
+              position: absolute;
+              top: 5px;
+              right: 5px;
+              background: #e53e3e;
+              color: white;
+              border: none;
+              width: 24px;
+              height: 24px;
+              cursor: pointer;
+              font-size: 14px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              transition: all 0.3s ease;
+        
+              &:hover {
+                background: #c53030;
+              }
+            }
+          }
+    }
+      
+      
+    .radio-group,
+    .checkbox-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+    }
+   
+
+    button {
+        padding: 12px;
+        background-color: #4FD1C5;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: #38B2AC;
+        }
+    }
+}
